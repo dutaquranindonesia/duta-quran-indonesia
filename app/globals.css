@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #b59410 100%);
+}
+
+.emerald-gradient {
+  background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #f0d78c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
