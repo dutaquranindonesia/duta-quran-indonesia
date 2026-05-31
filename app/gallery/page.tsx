@@ -36,18 +36,18 @@ export default function Gallery() {
       {/* Hero Section with 3D */}
       <section className="relative pt-32 pb-20 min-h-[60vh] flex items-center overflow-hidden">
         <ThreeSceneGallery />
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/60 via-emerald-950/70 to-emerald-950" />
+        <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/70 via-emerald-950/80 to-emerald-950" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-20 max-w-7xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6">
-              <span className="text-gold-gradient">Galeri</span> Kegiatan
+            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-white drop-shadow-lg">
+              <span className="text-gold-gradient drop-shadow-lg">Galeri</span> Kegiatan
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto drop-shadow-md">
               Dokumentasi momen-momen indah komunitas dalam menyebarkan kebaikan
             </p>
           </motion.div>

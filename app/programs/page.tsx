@@ -61,16 +61,18 @@ export default function Programs() {
       {/* Hero Section dengan 3D */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
         <ThreeSceneProgram />
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        {/* Overlay untuk meningkatkan kontras teks */}
+        <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/70 via-emerald-950/80 to-emerald-950" />
+        <div className="relative z-20 text-center px-6 max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-white">
-              <span className="text-gold-gradient">Program</span> Kami
+            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-white drop-shadow-lg">
+              <span className="text-gold-gradient drop-shadow-lg">Program</span> Kami
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto drop-shadow-md">
               Berbagai program unggulan untuk membangun generasi Qur'ani yang berdaya
             </p>
           </motion.div>
