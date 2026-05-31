@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { GraduationCap, Heart, BookOpen, Users, Calendar, Clock, Award } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ThreeSceneProgram from "@/components/ThreeSceneProgram";
 
 const programs = [
   {
@@ -57,21 +58,27 @@ export default function Programs() {
     <div className="min-h-screen">
       <Navbar />
 
-      <section className="pt-32 pb-16">
-        <div className="max-w-7xl mx-auto px-6">
+      {/* Hero Section dengan 3D */}
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
+        <ThreeSceneProgram />
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
+            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-white">
               <span className="text-gold-gradient">Program</span> Kami
             </h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
               Berbagai program unggulan untuk membangun generasi Qur'ani yang berdaya
             </p>
           </motion.div>
+        </div>
+      </section>
 
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8">
             {programs.map((program, index) => {
               const Icon = program.icon;

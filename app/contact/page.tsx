@@ -4,27 +4,34 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ThreeSceneContact from "@/components/ThreeSceneContact";
 
 export default function Contact() {
   return (
     <div className="min-h-screen">
       <Navbar />
 
-      <section className="pt-32 pb-16">
-        <div className="max-w-7xl mx-auto px-6">
+      {/* Hero Section dengan 3D */}
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
+        <ThreeSceneContact />
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
+            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-white">
               <span className="text-gold-gradient">Hubungi</span> Kami
             </h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
               Ada pertanyaan? Ingin bergabung? Kami siap membantu!
             </p>
           </motion.div>
+        </div>
+      </section>
 
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Contact Info */}
             <motion.div
